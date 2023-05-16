@@ -1,0 +1,27 @@
+Catan:
+
+Player : 
+	{
+		id: int,
+		name: string,
+		ranking: int,
+		description: string,
+		dateInscription: datetime
+	}
+	
+Tournament : 
+	{
+		id: int,
+		host: string,
+		place: string,
+		type: string (rules base on the number of player),
+		
+	}
+	
+
+enum tournament type :
+	{
+		championship,
+		cup,
+		european-cup
+	}

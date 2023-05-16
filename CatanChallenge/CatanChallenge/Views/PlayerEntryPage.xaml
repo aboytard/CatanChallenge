@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CatanChallenge.Views.PlayerEntryPage"
+             Title="Player Entry">
+    <!-- Layout children vertically -->
+    <StackLayout Margin="20,35,20,25">
+        <Label Text="Add a new player"
+           HorizontalOptions="Start"
+           BackgroundColor="CadetBlue" />
+        <Editor Placeholder="Add a new player"
+                Text="{Binding Description}"
+                HeightRequest="100" />
+        <Grid ColumnDefinitions="*,*">
+            <Button Text="Save"
+                    Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1"
+                    Text="Delete"
+                    Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+        <Button Text="Display Alert"
+            Clicked="DisplayAlertClicked"
+            VerticalOptions="End"
+                />
+    </StackLayout>
+</ContentPage>
